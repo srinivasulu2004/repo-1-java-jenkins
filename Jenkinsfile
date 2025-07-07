@@ -1,5 +1,8 @@
 pipeline {
     agent any
+     tools {
+        maven 'Mvn1 3.9.10'
+    }
     environment {
         IMAGE_NAME = 'srinivasulu10/java-web-app'
         VERSION = "${BUILD_NUMBER}"
