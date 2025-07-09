@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8001:8080 $IMAGE_NAME:$VERSION'
+                sh 'docker run --name container1 -d -p 8002:8080 $IMAGE_NAME:$VERSION'
             }
         }
     }
