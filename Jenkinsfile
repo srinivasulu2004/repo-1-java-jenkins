@@ -1,10 +1,10 @@
 pipeline {
     agent any
      tools {
-        maven 'mvn1'
+        maven 'mvn'
     }
     environment {
-        IMAGE_NAME = 'srinivasulu10/java-web-app'
+        IMAGE_NAME = 'srinivasulu2004/repo-1'
         VERSION = "${BUILD_NUMBER}"
     }
     stages {
@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 8080:8080 $IMAGE_NAME:$VERSION'
+                sh 'docker run -d -p 8001:8080 $IMAGE_NAME:$VERSION'
             }
         }
     }
